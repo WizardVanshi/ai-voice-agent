@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+requests
+pydantic
+assemblyai
+google-genai
+jinja2

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Voice Agent</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">AI Voice Agent</h1>
+            <p class="subtitle">Conversation with Memory • Powered by Gemini AI</p>
+        </div>
+
+        <div class="session-info">
+            <div class="session-id" id="session-id-display">
+                Session: Loading...
+            </div>
+            <button class="new-session-btn" id="new-session-btn">
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                </svg>
+                New Session
+            </button>
+        </div>
+
+        <div class="auto-record-toggle">
+            <label class="toggle-label">
+                <input type="checkbox" class="toggle-checkbox" id="auto-record-toggle">
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                Auto-record after AI responses
+            </label>
+        </div>
+
+        <div class="record-section">
+            <button class="record-button" id="record-button">
+                <svg class="record-icon" id="record-icon" viewBox="0 0 24 24">
+                    <path d="M12 14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2s-2 .9-2 2v6c0 1.1.9 2 2 2zm5-2c0 2.8-2.2 5-5 5s-5-2.2-5-5H5c0 3.5 2.6 6.4 6 6.9V21h2v-2.1c3.4-.5 6-3.4 6-6.9h-2z" />
+                </svg>
+            </button>
+
+            <div class="record-status" id="record-status">
+                <span class="status-ready">Ready to listen</span>
+            </div>
+        </div>
+
+        <div class="processing-indicator" id="processing-indicator">
+            <div class="spinner"></div>
+            <span id="processing-text">Processing your message...</span>
+        </div>
+
+        <div class="conversation-display" id="conversation-display">
+            <div class="conversation-item">
+                <div class="conversation-label user-label">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    </svg>
+                    You said
+                </div>
+                <div class="conversation-text user-text" id="user-question">
+                    ...
+                </div>
+            </div>
+
+            <div class="conversation-item">
+                <div class="conversation-label ai-label">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+                    </svg>
+                    AI Assistant
+                </div>
+                <div class="conversation-text ai-text" id="ai-response">
+                    ...
+                </div>
+            </div>
+        </div>
+
+        <!-- Hidden audio element for auto-playing responses -->
+        <audio id="chat-audio" style="display: none;" autoplay></audio>
+    </div>
+</body>
+
+<script src="/static/script.js"></script>
+
+</html>
