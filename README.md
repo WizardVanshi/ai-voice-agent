@@ -138,10 +138,7 @@ curl -X POST "http://127.0.0.1:8000/agent/chat/{session_id}"      -H "Content-Ty
 ![Recording](/screenshots/recording.png)
 
 ### Transcription Output
-![Transcription](/screenshots/transcription.png)
-
-### Murf Voice Playback
-![Playback](/screenshots/playback.png)
+![Response](/screenshots/response.png)
 
 ### API Docs (Swagger)
 ![API Docs](/screenshots/docs.png)
