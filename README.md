@@ -132,7 +132,7 @@ curl -X POST "http://127.0.0.1:8000/agent/chat/{session_id}"      -H "Content-Ty
 ## 📸 Screenshots
 
 ### Home Screen
-![Home Screen](/screenshots/home.png)
+![Home](/screenshots/home_page.png)
 
 ### Recording State
 ![Recording](/screenshots/recording.png)
