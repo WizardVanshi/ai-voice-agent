@@ -1,8 +1,9 @@
 fastapi
-uvicorn[standard]
-python-dotenv
+uvicorn
+websockets
 requests
-pydantic
+python-dotenv
+google-generativeai
 assemblyai
-google-genai
+murf
 jinja2
